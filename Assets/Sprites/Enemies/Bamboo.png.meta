@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6929814024863328386
-    second: Walk_Down_1
+    second: Bamboo_0
   - first:
       213: -2554780720562376739
-    second: Walk_Up_1
+    second: Bamboo_1
   - first:
       213: 5846492905212174399
-    second: Walk_Right_1
+    second: Bamboo_2
   - first:
       213: -5195449886657206636
-    second: Walk_Left_1
+    second: Bamboo_3
   - first:
       213: -7126038478816912561
-    second: Walk_Down_2
+    second: Bamboo_4
   - first:
       213: -131973207961556160
-    second: Walk_Up_2
+    second: Bamboo_5
   - first:
       213: -6787199230458902249
-    second: Walk_Right_2
+    second: Bamboo_6
   - first:
       213: -8589466087054108194
-    second: Walk_Left_2
+    second: Bamboo_7
   - first:
       213: 7758563519914631448
-    second: Walk_Down_3
+    second: Bamboo_8
   - first:
       213: 5455215464465996490
-    second: Walk_Up_3
+    second: Bamboo_9
   - first:
       213: 8140551358312808775
-    second: Walk_Right_3
+    second: Bamboo_10
   - first:
       213: 4734861066148959873
-    second: Walk_Left_3
+    second: Bamboo_11
   - first:
       213: 605195838837999271
-    second: Walk_Down_4
+    second: Bamboo_12
   - first:
       213: -3007428165554920265
-    second: Walk_Up_4
+    second: Bamboo_13
   - first:
       213: -4423367747982907071
-    second: Walk_Right_4
+    second: Bamboo_14
   - first:
       213: -4263304738878822348
-    second: Walk_Left_4
+    second: Bamboo_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_Down_1
+      name: Bamboo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,8 +147,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Up_1
+      name: Bamboo_1
       rect:
         serializedVersion: 2
         x: 16
@@ -168,8 +168,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Right_1
+      name: Bamboo_2
       rect:
         serializedVersion: 2
         x: 32
@@ -189,8 +189,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Left_1
+      name: Bamboo_3
       rect:
         serializedVersion: 2
         x: 48
@@ -210,8 +210,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Down_2
+      name: Bamboo_4
       rect:
         serializedVersion: 2
         x: 0
@@ -231,7 +231,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Up_2
+      name: Bamboo_5
       rect:
         serializedVersion: 2
         x: 16
@@ -252,7 +252,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Right_2
+      name: Bamboo_6
       rect:
         serializedVersion: 2
         x: 32
@@ -273,7 +273,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Left_2
+      name: Bamboo_7
       rect:
         serializedVersion: 2
         x: 48
@@ -294,7 +294,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,15 +307,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Down_3
+      name: Bamboo_8
       rect:
         serializedVersion: 2
         x: 0
         y: 16
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Up_3
+      name: Bamboo_9
       rect:
         serializedVersion: 2
         x: 16
@@ -336,8 +336,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -349,15 +349,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Right_3
+      name: Bamboo_10
       rect:
         serializedVersion: 2
         x: 32
         y: 16
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Left_3
+      name: Bamboo_11
       rect:
         serializedVersion: 2
         x: 48
@@ -378,8 +378,8 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 1}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -391,7 +391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Down_4
+      name: Bamboo_12
       rect:
         serializedVersion: 2
         x: 0
@@ -399,7 +399,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,7 +412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Up_4
+      name: Bamboo_13
       rect:
         serializedVersion: 2
         x: 16
@@ -420,7 +420,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Right_4
+      name: Bamboo_14
       rect:
         serializedVersion: 2
         x: 32
@@ -441,7 +441,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,7 +454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_Left_4
+      name: Bamboo_15
       rect:
         serializedVersion: 2
         x: 48
@@ -462,7 +462,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
