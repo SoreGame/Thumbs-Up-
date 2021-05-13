@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     public bool shouldRotate;
     public LayerMask whatIsPlayer;
     public Vector3 direction;
+    //public GameObject arrowPrefab;
 
     private Transform target;
     private Rigidbody2D rb2D;
@@ -49,14 +50,29 @@ public class EnemyAI : MonoBehaviour
             MoveCharacter(movement);
         }
 
-        if(isInAttackRange)
+        if (isInAttackRange)
         {
             rb2D.velocity = Vector2.zero;
-        }
+        }      
     }
 
     private void MoveCharacter(Vector2 dir)
     {
         rb2D.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
     }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Arrow arrow = collision.GetComponent<Arrow>();
+
+        if (arrow != null)
+        {
+            while (!isInAttackRange)
+            {
+                rb2D.MovePosition(transform.position + (target.position * speed * Time.deltaTime));
+                break;
+            }
+            rb2D.velocity = Vector2.zero;
+        }
+    }*/
 }

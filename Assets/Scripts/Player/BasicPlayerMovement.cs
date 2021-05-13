@@ -13,12 +13,10 @@ public class BasicPlayerMovement : MonoBehaviour
     public bool lookRight = true;
 
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
 
     void Update()
     {
@@ -32,8 +30,9 @@ public class BasicPlayerMovement : MonoBehaviour
         if (lookRight && moveInput.x < 0)
         {
             Flip();
-        }
+        }    
     }
+
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
@@ -42,9 +41,10 @@ public class BasicPlayerMovement : MonoBehaviour
     private void Flip()
     {
         lookRight = !lookRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
-    }
 
+        /* Vector3 Scaler = transform.localScale;
+         Scaler.x *= -1;
+         transform.localScale = Scaler;*/
+        transform.Rotate(0f, 180f, 0f);
+    }
 }
