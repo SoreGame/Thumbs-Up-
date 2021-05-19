@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 243953499649912488}
   - component: {fileID: 243953499649912489}
   - component: {fileID: 243953499649912491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bamboo_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0043087006, y: -0.04308641}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0.0625}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   checkRadius: 2
-  attackRadius: 0
+  attackRadius: 0.7
   shouldRotate: 1
   whatIsPlayer:
     serializedVersion: 2
