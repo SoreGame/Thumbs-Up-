@@ -5,21 +5,24 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private readonly int maxHealth = 100;
-    private int currentHealth;
+    private new SpriteRenderer renderer;
+    private bool isHitted = false;
+    private Color defaultColor;
 
-    
-    void Start()
+    public float timeToColor;
+    public int health = 100;
+
+    private void Start()
     {
-        currentHealth = maxHealth;
+        renderer = GetComponent<SpriteRenderer>();
+        defaultColor = renderer.color;
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        //play take damage animation
+        health -= damage;
 
-        if (currentHealth <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -27,8 +30,25 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        //play death animation
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isHitted)
+        {
+            isHitted = true;
+            StartCoroutine("SwitchColor");
+        }
+    }
+
+    IEnumerator SwitchColor()
+    {
+        renderer.color = new Color(1f, 0.30196078f, 0.30196078f);
+        yield return new WaitForSeconds(timeToColor);
+        renderer.color = defaultColor;
+        isHitted = false;
+    }
+
 }
 

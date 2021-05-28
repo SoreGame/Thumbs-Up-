@@ -5,74 +5,73 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public float speed;
-    public float checkRadius;
+    public float chaseRadius;
     public float attackRadius;
-    public bool shouldRotate;
     public LayerMask whatIsPlayer;
-    public Vector3 direction;
-    //public GameObject arrowPrefab;
+    public bool lookRight = true;
 
     private Transform target;
     private Rigidbody2D rb2D;
-    private Animator anim;
+    internal Animator animator;
+    private Vector3 direction;
     private Vector2 movement;
-    private bool isInChaseRange;
-    private bool isInAttackRange;
+    internal bool isTriggered;  
+    internal bool isInChaseRadius;
+    internal bool isInAttackRadius;
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
     private void Update()
     {
-        anim.SetBool("isRunning", isInChaseRange);
+        isInChaseRadius = Physics2D.OverlapCircle(transform.position, chaseRadius, whatIsPlayer);
+        isInAttackRadius = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
-        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
-
-        direction = target.position - transform.position;
-        direction.Normalize();
-        movement = direction;
-        if(shouldRotate)
+        if (target != null)
         {
-            anim.SetFloat("X", direction.x);
-            anim.SetFloat("Y", direction.y);
+            direction = target.position - transform.position;
+            direction.Normalize();
+            movement = direction;
+        }
+        
+        if (!lookRight && movement.x > 0)
+        {
+            Flip();
+        }
+        
+        if (lookRight && movement.x < 0)
+        {
+            Flip();
         }
     }
 
     private void FixedUpdate()
     {
-        if(isInChaseRange && !isInAttackRange)
+        if ((isInChaseRadius && !isInAttackRadius) || (isTriggered && !isInAttackRadius))
         {
+            animator.SetBool("isWalking", true);
             MoveCharacter(movement);
-        }
-
-        if (isInAttackRange)
-        {
-            rb2D.velocity = Vector2.zero;
         }      
-    }
 
-    private void MoveCharacter(Vector2 dir)
-    {
-        rb2D.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
-    }
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Arrow arrow = collision.GetComponent<Arrow>();
-
-        if (arrow != null)
+        if (isInAttackRadius)
         {
-            while (!isInAttackRange)
-            {
-                rb2D.MovePosition(transform.position + (target.position * speed * Time.deltaTime));
-                break;
-            }
+            animator.SetBool("isWalking", false);
             rb2D.velocity = Vector2.zero;
-        }
-    }*/
+        } 
+    }
+
+    private void MoveCharacter(Vector2 direction)
+    {
+        rb2D.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+    }
+
+    private void Flip()
+    {
+        lookRight = !lookRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
 }
