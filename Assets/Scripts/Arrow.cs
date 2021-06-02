@@ -22,10 +22,12 @@ public class Arrow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-        
+        EnemyAI ai = collision.GetComponent<EnemyAI>();
+
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            ai.isTriggered = true;
         }
 
         Destroy(gameObject);

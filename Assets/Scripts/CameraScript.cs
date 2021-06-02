@@ -13,6 +13,7 @@ public class CameraScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (player == null) return;
         Vector3 temp = transform.position;
         temp.x = player.position.x;
         temp.y = player.position.y;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    public Animator animator;
+    private Animator animator;
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
@@ -38,7 +38,8 @@ public class PlayerCombat : MonoBehaviour
         foreach(var enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-        }    
+            enemy.GetComponent<Enemy>().StartCoroutine("SwitchColor");
+        }   
     }
 
     private void OnDrawGizmosSelected()
